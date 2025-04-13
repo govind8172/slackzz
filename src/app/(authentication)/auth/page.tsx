@@ -58,7 +58,9 @@ const AuthPage = () => {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsAuthenticating(true);
-    const response = await registerWithEmail(values);
+    // const response = await registerWithEmail(values);
+    const response = await registerWithEmail({ email: values.email! });
+
     const { data, error } = JSON.parse(response);
     setIsAuthenticating(false);
     if (error) {

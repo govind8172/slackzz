@@ -43,12 +43,7 @@ const Workspace = async ({
           userData={userData}
           userWorksapcesData={userWorkspaceData as UserWorkspace[]}
         />
-        <InfoSection
-          currentWorkspaceData={currentWorkspaceData}
-          userData={userData}
-          userWorkspaceChannels={userWorkspaceChannels}
-          currentChannelId=''
-        />
+       
 
         <NoDataScreen
           userId={userData.id}

@@ -49,7 +49,11 @@ export type Messages = {
   user_id: string;
   workspace_id: string;
 };
-
+export type member = {
+  id: string;
+  name?: string;
+  email?: string;
+};
 export type MessageWithUser = Messages & { user: User };
 
 export type SockerIoApiResponse = NextApiResponse & {

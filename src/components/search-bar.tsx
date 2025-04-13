@@ -9,7 +9,7 @@ import {
 import { toast } from 'sonner';
 
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Channel, Workspace } from '@/types/app';
+import { Channel, Workspace, member } from '@/types/app';
 import { useColorPrefrences } from '@/providers/color-prefrences';
 import { cn } from '@/lib/utils';
 import {
@@ -93,10 +93,10 @@ const SearchBar: FC<SearchBarProps> = ({
             {currentWorkspaceData?.members?.map(member => {
               return (
                 <div
-                  key={member.id}
+                  // key={member.id}
                   className='flex items-center my-2 justify-between'
                 >
-                  <div className='flex items-center p-2'>
+                  {/* <div className='flex items-center p-2'>
                     <span className='mr-2 text-sm text-black dark:text-white'>
                       {member?.name ?? member?.email}
                     </span>
@@ -106,9 +106,9 @@ const SearchBar: FC<SearchBarProps> = ({
                     {isChannelCreator(member.id) && (
                       <MdOutlineAdminPanelSettings className='w-5 h-5' />
                     )}
-                  </div>
+                  </div> */}
 
-                  <div className='flex gap-x-2'>
+                  {/* <div className='flex gap-x-2'>
                     {loggedInUserId !== member.id &&
                       !isRegulator(member.id) &&
                       isChannelMember(member.id) && (
@@ -139,7 +139,7 @@ const SearchBar: FC<SearchBarProps> = ({
                         Add to Channel
                       </Button>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               );
             })}

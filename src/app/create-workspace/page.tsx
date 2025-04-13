@@ -16,7 +16,8 @@ import { useRouter } from 'next/navigation';
 const CreateWorkspace = () => {
   const { currStep } = useCreateWorkspaceValues();
 
-  let stepInView = null;
+  // let stepInView = null;
+  let stepInView: JSX.Element | null = null;
 
   switch (currStep) {
     case 1:
